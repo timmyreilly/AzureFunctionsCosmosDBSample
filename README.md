@@ -1,0 +1,1 @@
+# DocumentDB Repository Pattern for Azure Function in C#
