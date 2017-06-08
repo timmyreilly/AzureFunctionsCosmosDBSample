@@ -9,7 +9,7 @@ public static void Run(string myQueueItem, TraceWriter log)
     var collectionName = System.Environment.GetEnvironmentVariable("CollectionName", EnvironmentVariableTarget.Process);
     var databaseName = System.Environment.GetEnvironmentVariable("DatabaseName", EnvironmentVariableTarget.Process);
 
-    string partitionKey = "NumberOfChars" // Partitioning on Number of Chars - arbitrary for sample purposes for more on partitioning visit: 
+    string partitionKey = "NumberOfChars"; // Partitioning on Number of Chars - arbitrary for sample purposes for more on partitioning visit: 
 
     var Logic = new Logic(docDBEndpoint, docDBKey, databaseName, partitionKey, collectionName); 
 
