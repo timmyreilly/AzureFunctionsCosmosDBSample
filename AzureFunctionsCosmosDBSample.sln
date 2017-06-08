@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionsCosmosDBSample", "AzureFunctionsCosmosDBSample\AzureFunctionsCosmosDBSample.csproj", "{EF1BE991-E3D3-4B9E-82CB-9F1ECDBEEA27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupportingLibrary", "SupportingLibrary\SupportingLibrary.csproj", "{0FDDAA66-62A1-4A7F-A675-D3B27C94993C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentDb.Repository", "DocumentDb.Repository\DocumentDb.Repository.csproj", "{0F3885C5-5773-49B2-BBDC-E20BE37F8E40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,19 @@ Global
 		{EF1BE991-E3D3-4B9E-82CB-9F1ECDBEEA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF1BE991-E3D3-4B9E-82CB-9F1ECDBEEA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF1BE991-E3D3-4B9E-82CB-9F1ECDBEEA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDDAA66-62A1-4A7F-A675-D3B27C94993C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDDAA66-62A1-4A7F-A675-D3B27C94993C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDDAA66-62A1-4A7F-A675-D3B27C94993C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDDAA66-62A1-4A7F-A675-D3B27C94993C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F3885C5-5773-49B2-BBDC-E20BE37F8E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F3885C5-5773-49B2-BBDC-E20BE37F8E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F3885C5-5773-49B2-BBDC-E20BE37F8E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F3885C5-5773-49B2-BBDC-E20BE37F8E40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8
 	EndGlobalSection
 EndGlobal
