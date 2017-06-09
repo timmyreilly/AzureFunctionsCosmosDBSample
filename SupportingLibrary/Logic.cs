@@ -14,7 +14,7 @@ namespace SupportingLibrary
         private readonly string _partitionKeyName;
         private IDocumentDbRepository<WordsData> _repository;
 
-        public Logic(string faceKey, string computerVisionKey, string emotionKey, string docDBEndpoint, string docDBKey, string docDbName, string partitionKeyName, string docDbCollectionName)
+        public Logic(string docDBEndpoint, string docDBKey, string docDbName, string partitionKeyName, string docDbCollectionName)
         {
             _partitionKeyName = partitionKeyName;  
 

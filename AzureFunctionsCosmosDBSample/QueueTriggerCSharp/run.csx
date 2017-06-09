@@ -1,6 +1,8 @@
 #r "..\bin\SupportingLibrary.dll"
 
 using System;
+using System.Diagnostics;  
+using SupportingLibrary;
 
 public static void Run(string myQueueItem, TraceWriter log)
 {
@@ -11,12 +13,12 @@ public static void Run(string myQueueItem, TraceWriter log)
 
     string partitionKey = "NumberOfChars"; // Partitioning on Number of Chars - arbitrary for sample purposes for more on partitioning visit: 
 
-    var Logic = new Logic(docDBEndpoint, docDBKey, databaseName, partitionKey, collectionName); 
+    var logic = new Logic(docDBEndpoint, docDBKey, databaseName, partitionKey, collectionName); 
 
     log.Info($"C# Timer trigger function starting: {DateTime.Now}");
     var stopWatch = new Stopwatch();
     stopWatch.Start();
-    Logic.ProcessWords(myQueueItem).Wait();
+    logic.ProcessWords(myQueueItem).Wait();
 
     stopWatch.Stop();
 
