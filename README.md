@@ -2,9 +2,8 @@
 
 ### Repository provided by Crokus - https://github.com/Crokus/cosmosdb-repo 
 
-1. Created a cosmos db from the Azure Portal with the MongoDB API Specification. 
-2. Configured appsettings.json. `AzureWebJobsStorage` is for our queue and everything else is for Cosmos. (Make sure encrypted is false)
-
+1. Create a Cosmos DB instance from the Azure Portal with the MongoDB API Specification. 
+2. Configure appsettings.json. `AzureWebJobsStorage` is for our queue and everything else is for Cosmos DB. (Make sure encrypted is set to `false`)
 ```json
 
 {
@@ -32,9 +31,9 @@
 <img src="http://imgur.com/rUNanD0.png" width="800">
 </kbd>
 
-If function in Visual Studio 2015 are new to you watch this video: https://www.youtube.com/watch?v=R7F92POLGaE 
+If functions in Visual Studio 2015 are new to you watch this video: https://www.youtube.com/watch?v=R7F92POLGaE 
 
-5. When it builds open Azure Storage Explorer and throw something in a queue according to function.json
+5. When it builds open Azure Storage Explorer and throw something in a queue. The `queueName` your function is listening to is set in function.json: 
 
 ```json
 {
