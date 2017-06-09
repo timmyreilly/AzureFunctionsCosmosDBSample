@@ -20,4 +20,52 @@
 
 ```
 
-3. 
+3. In the Azure Portal Create a CollectionName and DatabaseName that matches. 
+
+<kbd>
+<img src="http://imgur.com/FNae0Q6.png" width="800">
+</kbd> 
+
+4. Make sure you run your function properly by setting the Web Properties to something like this: 
+
+<kbd>
+<img src="http://imgur.com/rUNanD0.png" width="800">
+</kbd>
+
+If function in Visual Studio 2015 are new to you watch this video: https://www.youtube.com/watch?v=R7F92POLGaE 
+
+5. When it builds open Azure Storage Explorer and throw something in a queue according to function.json
+
+```json
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "doc-db-entry",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
+```
+
+And here's what that looks like in storage explorer: 
+<kbd>
+<img src="http://imgur.com/jlXGwOP.png" width="800">
+</kbd>
+
+6. Its running and grabbing messages off the queue. 
+
+<kbd>
+<img src="http://imgur.com/mUqrTGH.png" width="800">
+</kbd>
+
+Now you can see your documents in the Azure Portal with the messages passed through the queue: 
+
+<kbd>
+<img src="http://imgur.com/UJzvmsr.png" width="800">
+</kbd>
+
+Reach out to me on twitter if you have any questions: http://twitter.com/timmyreilly 
